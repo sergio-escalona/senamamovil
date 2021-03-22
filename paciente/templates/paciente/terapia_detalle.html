@@ -1,0 +1,25 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+<section class="row">
+    
+    <h1 class="col-xs-12">Terapia</h1>
+
+    <div class="col-xs-12">
+        <p class="fecha col-xs-11">Paciente {{ terapia.paciente }}</p>
+        <br>
+        <p class="fecha col-xs-11">Fecha: {{ terapia.fecha_atencion }}</p>
+        <br>
+        <p class="fecha col-xs-11">Terapeuta: {{ terapia.terapeuta }}</p>
+        <br>
+        <p class="fecha col-xs-11">Detalle: Se realiza terapia muscular en piernas</p>
+        <br>
+        <p class="fecha col-xs-11">Prescripción: Ninguna</p>
+    </div>
+
+    <div class="col-xs-2">
+        <a href="{% url 'index' %}">Volver</a>
+    </div>
+</section>
+{% endblock %}

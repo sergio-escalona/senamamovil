@@ -1,0 +1,17 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+<section class="row main">
+    <div class="col-xs-12 col-md-4 center-xs">
+        <h2>Agendar Terapia</h2>
+
+        <p>Comuna: Las Condes</p>
+        <p>Lugar de atención: Cesfam Apoquindo</p>
+        <form method="POST" class="post-form">{% csrf_token %}
+            {{ formTera.as_p }}
+            <button type="submit" class="save btn btn-default">Guardar</button>
+        </form>
+    </div>
+</section>    
+{% endblock %}

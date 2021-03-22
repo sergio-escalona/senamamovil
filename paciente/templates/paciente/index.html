@@ -1,0 +1,62 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+<section>
+    <div class="content container contenedor-menu">
+        <div class="item">
+            <div class="row col-xs-12">
+                <a href="{% url 'terapia' %}">
+                    <div class="col-xs-10 col-md-3 opcion azul">
+                        <img src="{% static 'img/terapia.png' %}" alt="Terapia">
+                        <p>Terapia</p>
+                    </div>
+                </a>
+                
+                <a href="{% url 'menu' %}">
+                    <div class="col-xs-10 col-md-3 opcion verde">
+                        <img src="{% static 'img/menu.png' %}" alt="Alimentación">
+                        <p>Alimentación</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'campana' %}">
+                    <div class="col-xs-10 col-md-3 opcion salmon">
+                        <img src="{% static 'img/campana.png' %}" alt="Campañas">
+                        <p>Campañas y Mensajes</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="content container contenedor-menu">
+        <div class="item center-xs">
+            <div class="row col-xs-12">
+                <a href="{% url 'emergencia' %}">
+                    <div class="col-xs-10 col-md-3 opcion rojo">
+                        <img src="{% static 'img/ambulancia.png' %}" alt="Emergencia">
+                        <p>EMERGENCIA</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'transporte' %}">
+                    <div class="col-xs-10 col-md-3 opcion naranjo">
+                        <img src="{% static 'img/transporte.png' %}" alt="Transporte">
+                        <p>Transporte</p>
+                    </div>
+                </a>
+
+                <a href="{% url 'contacto' %}">
+                    <div class="col-xs-10 col-md-3 opcion amarillo">
+                        <img src="{% static 'img/contacto.png' %}" alt="Contacto">
+                        <p>Contacto</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

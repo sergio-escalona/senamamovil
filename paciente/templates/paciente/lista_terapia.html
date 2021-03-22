@@ -1,0 +1,30 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+
+<section>
+    <h2>Terapias agendadas</h2>
+    <table>
+        <tr>
+            <th>Fecha</th>
+            <th>Terapeuta</th>
+        </tr>
+
+        {% for t in terapia %}
+            <tr>
+                <td>{{ t.fecha_atencion }}</td>
+                <td>{{ t.terapeuta }}</td>
+                <td><a href="{% url 'eliminar_terapia' pk=t.pk %}">Cancelar</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    {% if messages %}
+        {% for m in messages %}
+            <div> {{ m }} </div>
+        {% endfor %}
+    {% endif %}
+</section>
+
+{% endblock %}

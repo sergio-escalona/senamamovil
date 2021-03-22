@@ -1,0 +1,35 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+<section>
+    <div class="col-xs-12 contenedor_prototipo amarillo">
+        <h1>Contacto</h1>
+        <br>
+        <form action="#" method="POST" onsubmit="return validar()">
+            {% csrf_token %}
+            <div class="formulario">
+                <label for="mensaje">Mensaje</label>
+                <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+                <div id="emensaje" class="error"></div>
+            </div>
+
+            <div class="formulario">
+                <label for="motivo">Motivo</label>
+                <select name="motivo" id="motivo" class="control-formulario">
+                    <option value="" disabled selected hidden>Elija motivo</option>
+                    <option value="Sugerencia">Sugerencia</option>
+                    <option value="Queja">Queja</option>
+                    <option value="Trabajar">Otro</option>
+                </select>
+                <div id="emotivo" class="error"></div>
+            </div>
+
+            <div class="formulario">
+                <input type="submit" class="boton enviar" id="enviar" value="Enviar">
+            </div>
+            <div id="confirmacion" class="exito"></div>
+        </form>
+    </div>
+</section>
+{% endblock %}

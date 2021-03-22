@@ -1,0 +1,22 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+<section>
+    <div class="content container contenedor-menu">
+        <div class="item center-xs">
+            <div class="row col-xs-12">
+                <div class="col-xs-10 col-md-3 opcion azul">
+                    <a href="{% url 'nueva_terapia' %}">Solicitar terapia</a>
+                </div>
+                <div class="col-xs-10 col-md-3 opcion salmon">
+                    <a href="{% url 'lista_terapia' %}">Ver terapias agendadas</a>
+                </div> 
+                <div class="col-xs-10 col-md-3 opcion naranjo">
+                    <a href="{% url 'terapia_anterior' %}">Ver terapias pasadas</p>
+                </div>                 
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

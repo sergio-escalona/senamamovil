@@ -1,0 +1,26 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+
+<section>
+    <h2>Terapias Anteriores</h2>
+    <table>
+        <tr>
+            <th>Fecha</th>
+            <th>Terapeuta</th>
+        </tr>
+
+        {% for t in terapia %}
+            <tr>
+                <td>{{ t.fecha_atencion }}</td>
+                <td>{{ t.terapeuta }}</td>
+                <td><a href="{% url 'terapia_detalle' pk=t.pk %}">Detalles</a></td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    
+</section>
+
+{% endblock %}

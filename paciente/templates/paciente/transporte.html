@@ -1,0 +1,15 @@
+{% extends 'paciente/base.html' %}
+{% load static %}
+
+{% block content %} 
+<section>
+    <div class="col-xs-12 contenedor_prototipo naranjo">
+        <h1>Transporte</h1>
+        <br>
+        <p>Sin solicitudes de transporte</p>
+        <br>
+        <br>
+        <h2><a href="{% url 'transporte_confirmacion' %}">Solicitar transporte</a></h2>
+    </div>
+</section>
+{% endblock %}
